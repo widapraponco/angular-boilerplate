@@ -1,0 +1,30 @@
+<main>
+  <div class="login wrapper">
+    <mat-card class="login-card">
+      <form>
+        <div class="form-group center">
+          <mat-icon class="big-icon">account_circle</mat-icon>
+        </div>
+        <div class="form-group center">
+          <span>Welcome your grace</span>
+        </div>
+
+        <mat-form-field class="form-group">
+          <input type="text" placeholder="Username" matInput [formControl]="authControl">
+          <mat-icon matSuffix>mail</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="form-group">
+          <input placeholder="Password" type="password" matInput [formControl]="authControl">
+          <mat-icon matSuffix>remove_red_eye</mat-icon>
+        </mat-form-field>
+
+        <mat-checkbox class="form-group">remember me</mat-checkbox>
+        <button mat-raised-button color="primary" class="form-group">Login</button>
+        <div class="center form-group">
+          <a href="#" class="mr-9"><small>forget password?</small></a><a href="#"><small>sign up</small></a>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</main>
