@@ -1,0 +1,27 @@
+<div class="sidebar">
+  <div class="profile">
+    <img class="profile-img" src="https://via.placeholder.com/150" alt="userprofile">
+    <div class="greet">
+      <span class="lead">Welcome {{username}}!</span>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <nav class="sidenav">
+    <ul class="nav-list">
+      <a href="#">
+      <li class="nav nav-selected">
+        <mat-icon>dashboard</mat-icon>
+        <div>
+          <span class="nav-text">Dashboard</span>
+        </div>
+      </li></a>
+      <a href="#" *ngFor="let n of [1,2,3,4]">
+      <li class="nav">
+        <mat-icon>home</mat-icon>
+        <div>
+          <span>Dashboard</span>
+        </div>
+      </li></a>
+    </ul>
+  </nav>
+</div>

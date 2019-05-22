@@ -1,0 +1,20 @@
+<mat-drawer-container class="wrapper" autosize>
+  <mat-drawer #sidenav class="sidebar" mode="side" opened>
+    <app-sidebar class="sidebar"></app-sidebar>
+  </mat-drawer>
+
+  <button (click)="sidenav.toggle()" class="collapse-btn" mat-raised-button color="primary">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <main>
+    <app-topbar></app-topbar>
+    <app-breadcrumb></app-breadcrumb>
+
+    <article class="content">
+      <div *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11]">
+        <mat-card>Simple Card</mat-card>
+      </div>
+    </article>
+  </main>
+</mat-drawer-container>
