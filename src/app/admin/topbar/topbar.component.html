@@ -1,23 +1,22 @@
-<mat-toolbar class="topbar" color="secondary">
-  <span class="title">Klepon Admin v1.0</span>
-  <span class="spacer"></span>
-  <span class="attr">{{today | date:'medium'}}</span>
-  <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
-    <mat-icon>timer</mat-icon>
-  </button>
-  <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
-    <mat-icon>message</mat-icon>
-  </button>
-  <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
-    <mat-icon>mail</mat-icon>
-  </button>
-  <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
-    <mat-icon>account_circle</mat-icon>
-  </button>
+<mat-toolbar [ngClass]="{'with-sidenav':withSidenav}" class="topbar" color="secondary">
+    <span class="title">Klepon Admin v1.0</span>
+    <span class="spacer"></span>
+    <span class="attr">{{today | date:'medium'}}</span>
+    <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
+      <mat-icon>timer</mat-icon>
+    </button>
+    <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
+      <mat-icon>message</mat-icon>
+    </button>
+    <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
+      <mat-icon>mail</mat-icon>
+    </button>
+    <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
 
-
-  <mat-menu #account_menu="matMenu">
-    <button mat-menu-item>Profile</button>
-    <button mat-menu-item>Logout</button>
-  </mat-menu>
+    <mat-menu #account_menu="matMenu">
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
 </mat-toolbar>

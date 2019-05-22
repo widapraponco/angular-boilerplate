@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-topbar',
@@ -7,6 +7,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 })
 export class TopbarComponent implements OnInit {
   public today: number = Date.now();
+  @Input()
+  public withSidenav = true;
   constructor() {
 
     setInterval(()=>{

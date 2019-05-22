@@ -17,6 +17,13 @@ body {
   text-align: center;
 }
 
+.lead {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
 .big-icon {
   font-size: 7em;
   height: auto !important;
@@ -30,4 +37,16 @@ body {
 .my-30 {
   margin-top: 30px !important;
   margin-bottom: 30px !important;
+}
+
+.i-2 {
+  z-index: 2 !important;
+}
+
+.i-3 {
+  z-index: 3 !important;
+}
+
+.i--1 {
+  z-index: -1 !important;
 }

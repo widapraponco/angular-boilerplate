@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TopbarComponent } from './topbar/topbar.component';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
   public showSideNav = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  @ViewChild(TopbarComponent) topbar: TopbarComponent;
+  sidenavToggle(e) {
+    e.toggle();
+    this.topbar.withSidenav = !this.topbar.withSidenav ;
   }
 
 }

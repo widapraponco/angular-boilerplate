@@ -6,21 +6,21 @@
   margin: 0
   background: #6a6a6a
 
-// .content
-//   // position: relative
-//   height: 100%
-//   align-items: flex-start
-//   justify-content: flex-start
-.content
-  max-height: 80vh
-  overflow: auto
-  margin: 10px
+.fixed-top
+  position: fixed
+  width: 100%
+  // .topbar
+  .breadcrumb
+    -moz-box-shadow:    0 0 15px #595759 !important
+    -webkit-box-shadow: 0 0 15px #595759 !important
+    box-shadow:         0 0 15px #595759 !important
+  button
+    position: absolute
+    top: 15px
+    left: -3px
+    padding: 0
+    min-width: 20px
+    width: 40px
 
-.collapse-btn
-  position: absolute
-  top: 15px
-  left: -3px
-  z-index: 1
-  padding: 0
-  min-width: 20px
-  width: 40px
+.content
+  margin: 115px 10px 0
