@@ -1,0 +1,142 @@
+<div class="wrapper">
+  <!-- <div class="shop-wrapper"> -->
+    <div class="background">
+      <span class="left-bg"></span>
+      <span class="right-bg"></span>
+    </div>
+    <div class="content">
+      <!-- <div class="shop-container"> -->
+
+        <div class="l-ctn">
+          <div class="logo-s center">
+            <span class="lead">Company Name</span>
+          </div>
+        </div>
+        <div class="r-ctn">
+          <mat-toolbar class="transparant">
+            <span class="mr-9 normal-txt">Language</span>
+            <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
+              English
+              <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+            </button>
+            <span class="spacer"></span>
+            <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
+              My Account
+            </button>
+            <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
+              Orders
+            </button>
+            <button class="top-nav" mat-button [matMenuTriggerFor]="account_menu">
+              Coupons
+            </button>
+            <button class="top-nav" mat-button [matMenuTriggerFor]="cart_menu">
+              <mat-icon matBadge="15" matBadgePosition="after" matBadgeColor="warn">shopping_cart</mat-icon>
+            </button>
+
+            <mat-menu #cart_menu="matMenu" xPosition="before">
+              <mat-list>
+                <h3 mat-subheader>Folders</h3>
+                <mat-list-item *ngFor="let i of [1,2,3]">
+                  <mat-icon mat-list-icon>folder</mat-icon>
+                  <h4 mat-line>{{i}}</h4>
+                  <!-- <p mat-line> {{folder.updated | date}} </p> -->
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <h3 mat-subheader>Notes</h3>
+                <mat-list-item *ngFor="let i of [1,2,3]">
+                  <mat-icon mat-list-icon>note</mat-icon>
+                  <h4 mat-line>{{i}}sadasdad</h4>
+                  <!-- <p mat-line> {{note.updated | date}} </p> -->
+                </mat-list-item>
+              </mat-list>
+            </mat-menu>
+
+            <mat-menu #account_menu="matMenu">
+              <button mat-menu-item>Profile</button>
+              <button mat-menu-item (click)="signOut()">Logout</button>
+            </mat-menu>
+          </mat-toolbar>
+        </div>
+        <div class="l-ctn center">
+          <form class="example-form padding0">
+            <mat-form-field>
+              <mat-label>Search</mat-label>
+              <input matInput placeholder="Banana">
+              <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+          </form>
+        </div>
+        <div class="r-ctn">
+          <div class="delivery inline">
+            <mat-card class="free inline">
+              <div class="align-items-start">
+                <h5 class="mb-2">Free Delivery</h5>
+                <p class="m-0"><small>
+                  Over $50 orders</small>
+                </p>
+              </div>
+              <span class="spacer"></span>
+              <mat-icon class="align-items-end w-2">local_shipping</mat-icon>
+            </mat-card>
+            <mat-card class="quick inline">
+              <div class="align-items-start">
+                <h5 class="mb-2">Quick Delivery</h5>
+                <p class="m-0">
+                  <small>Over $50 orders</small>
+                </p>
+              </div>
+              <span class="spacer"></span>
+              <mat-icon class="align-items-end w-2">query_builder</mat-icon>
+            </mat-card>
+          </div>
+        </div>
+        <div class="l-ctn center">
+          <h1 class="my-10">Categories</h1>
+        </div>
+        <div class="r-ctn">
+          <!-- none  -->
+        </div>
+
+        <mat-toolbar class="transparant px-20">
+          <button
+          @fade
+          class="top-nav mr-10"
+          color="secondary"
+          mat-button
+          *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
+            Category {{i}}
+          </button>
+        </mat-toolbar>
+        <div class="inline mb-20 ml-40">
+          <app-item-card
+            class="selected-card"
+            [width]="180"
+            [height]="300"
+            [hImage]="140"
+            [bgColor]="'#fdc12f'"
+            ></app-item-card>
+          <div class="overflow">
+            <app-item-card
+              class="item-card center"
+              [useDetails]="false"
+              [useCartBtn]="false"
+              [width]="150"
+              [height]="140"
+              [hImage]="90"
+              *ngFor="let i of [1,2,3,4,5,6,7,8,9]"></app-item-card>
+            <!-- <mat-card class="item-card center" *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
+              <mat-card-header>
+                <span mat-card-avatar class="lead">Item 1</span>
+                <span class="spacer"></span>
+                <mat-card-subtitle>$100</mat-card-subtitle>
+                <mat-card-title>50 Kg</mat-card-title>
+              </mat-card-header>
+              <img src="https://via.placeholder.com/100" alt="item image">
+            </mat-card> -->
+          </div>
+        </div>
+
+      <!-- </div> -->
+    </div>
+  <!-- </div> -->
+</div>

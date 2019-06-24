@@ -1,0 +1,29 @@
+<mat-card class="card" [ngStyle]="{'background-color': bgColor, 'width.px':width, 'height.px':height}">
+  <div class="header">
+    <div class="name">
+      <span class="lead">Item Name</span>
+    </div>
+    <span class="spacer"></span>
+    <div class="info">
+      <span class="unit block">Kg</span>
+      <span class="discount block">$100</span>
+      <span class="price block">$50</span>
+    </div>
+  </div>
+  <div class="image">
+    <img src="https://placeimg.com/{{width}}/{{hImage}}/any" alt="item image">
+  </div>
+  <div class="details" *ngIf="useDetails">
+    <mat-form-field>
+      <mat-label>Piece</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let i of [1,2,3,4,5,6,7,8]" [value]="i">
+          {{i}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="footer" *ngIf="useCartBtn">
+    <button mat-flat-button color="primary">add to cart</button>
+  </div>
+</mat-card>

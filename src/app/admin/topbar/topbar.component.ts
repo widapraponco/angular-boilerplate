@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'angularx-social-login';
 
 @Component({
   selector: 'app-topbar',
@@ -9,7 +11,7 @@ export class TopbarComponent implements OnInit {
   public today: number = Date.now();
   @Input()
   public withSidenav = true;
-  constructor() {
+  constructor(private authService: AuthService, private router: Router) {
 
     setInterval(()=>{
       this.today = Date.now();
@@ -18,6 +20,14 @@ export class TopbarComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  signOut () : void {
+    this.authService.signOut()
+    .then((resp)=>{
+      // this.router
+      this.router.navigate(['']);
+    })
   }
 
 }

@@ -5,7 +5,7 @@
         <div class="form-group center">
           <mat-icon class="big-icon">account_circle</mat-icon>
         </div>
-        <div class="form-group center my-30">
+        <div class="form-group center my-20">
           <strong>Welcome your grace!</strong>
         </div>
 
@@ -22,11 +22,29 @@
         </mat-form-field>
 
         <mat-checkbox class="form-group">remember me</mat-checkbox>
-        <button mat-raised-button color="primary" class="form-group">Login</button>
+        <button mat-raised-button color="primary" class="form-group my-10">Login</button>
         <div class="center form-group">
           <a href="#" class="mr-9"><small>forget password?</small></a><a href="#"><small>sign up</small></a>
         </div>
       </form>
+
+      <div class="social-login">
+        <div class="center align-items-center">
+          <span class="line"></span>
+          <span class="lead"><small>Sign In With</small></span>
+          <span class="line"></span>
+        </div>
+        <div class="center">
+          <app-fbauth></app-fbauth>
+          <app-googleauth></app-googleauth>
+        </div>
+      </div>
+
+      <!-- <img src="{{ user.photoUrl }}">
+      <div>
+        <h4>{{ user.name }}</h4>
+        <p>{{ user.email }}</p>
+      </div> -->
     </mat-card>
   </div>
 </main>
