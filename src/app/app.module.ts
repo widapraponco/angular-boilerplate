@@ -13,12 +13,14 @@ import { GoogleauthComponent } from './_shared/googleauth/googleauth.component';
 import { MaterialModule } from './_modules';
 import { AdminModule } from './admin/admin.module';
 import { WidgetModule } from './_shared/widget/widget.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 //plugin
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
 import { PageNotFoundComponent } from './_error/page-not-found/page-not-found.component';
 import { ShopPageComponent } from './landing/shop-page/shop-page.component';
 import { ItemCardComponent } from './_shared/item-card/item-card.component';
+import { ShopPage2Component } from './landing/shop-page2/shop-page2.component';
 
 let config = new AuthServiceConfig([
   {
@@ -39,7 +41,7 @@ export function provideConfig () {
   declarations: [
     AppComponent,
     LoginComponent,
-    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent,
+    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent, ShopPage2Component,
     // AdminComponent
   ],
   imports: [
@@ -49,6 +51,7 @@ export function provideConfig () {
     MaterialModule, AdminModule,
     WidgetModule,
     SocialLoginModule,
+    FlexLayoutModule,
   ],
   providers: [
     {
