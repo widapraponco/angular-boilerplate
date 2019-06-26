@@ -1,27 +1,33 @@
 <div class="wrapper">
   <div class="nav">
-    
       <mat-toolbar>
-          <span>KLEPON SHOP</span>
+          <!-- <button mat-button [matMenuTriggerFor]="menu">Menu
+              <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu> -->
+          <span class="my-10">KLEPON SHOP</span>
+          <span class="my-10 title">KLEPON SHOP</span>
+          <span class="my-10">KLEPON SHOP</span>
       </mat-toolbar> 
   </div>
   <div class="top">
-    <div class="right">
-        <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Shiba Inu</mat-card-title>
-              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
-            </mat-card-actions>
-          </mat-card>
-    </div>
-    <div class="left">
-        <img clas="center" src="https://placeimg.com/{{400}}/{{400}}/any" alt="Photo of a Shiba Inu">
-      
-    </div>
+      <mat-grid-list cols="2" rowHeight="2:1">
+          <mat-grid-tile> 
+            <span>
+              <h1 class="my-10">Welcome, Let's Shopping</h1><br>
+              happy shopping in our shop. we provide for your lifestyle needed<br><br>
+              <button mat-raised-button><h3>More Info</h3></button>
+          </span>
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <img src="https://placeimg.com/{{700}}/{{300}}/any" alt="like">
+          </mat-grid-tile>
+        </mat-grid-list>
+  </div>
+  <div class="bottom">
+
   </div>
 </div>
