@@ -1,16 +1,32 @@
 <div class="wrapper">
   <div class="nav">
       <mat-toolbar>
-          <!-- <button mat-button [matMenuTriggerFor]="menu">Menu
-              <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+          <button mat-button [matMenuTriggerFor]="menu">Menu
+              <mat-icon matSuffix>reorder</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
             <button mat-menu-item>Item 1</button>
             <button mat-menu-item>Item 2</button>
-          </mat-menu> -->
-          <span class="my-10">KLEPON SHOP</span>
+          </mat-menu>
           <span class="my-10 title">KLEPON SHOP</span>
-          <span class="my-10">KLEPON SHOP</span>
+          <button mat-button><mat-icon>add_shopping_cart</mat-icon></button>
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Redial</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Check voice mail</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+            </button>
+          </mat-menu>
       </mat-toolbar> 
   </div>
   <div class="top">
@@ -20,14 +36,30 @@
               <h1 class="my-10">Welcome, Let's Shopping</h1><br>
               happy shopping in our shop. we provide for your lifestyle needed<br><br>
               <button mat-raised-button><h3>More Info</h3></button>
-          </span>
+            </span>
           </mat-grid-tile>
           <mat-grid-tile>
             <img src="https://placeimg.com/{{700}}/{{300}}/any" alt="like">
           </mat-grid-tile>
         </mat-grid-list>
   </div>
-  <div class="bottom">
-
+  <div class="middle title">
+      <button mat-button><h4>Men</h4></button> |<button mat-button><h4>Woman</h4></button>|
+      <button mat-button><h4>Child</h4></button>
+  </div>
+  <div class="bottom title">
+      <mat-grid-list cols="3" rowHeight="">
+          <mat-grid-tile *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
+            <app-item-card
+              class="item-card center"
+              [useDetails]="false"
+              [useCartBtn]="false"
+              [width]="180"
+              [height]="300"
+              [hImage]="90"
+              [bgColor]="'#D3D3D3'">
+            </app-item-card>
+          </mat-grid-tile>
+        </mat-grid-list>
   </div>
 </div>
