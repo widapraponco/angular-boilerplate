@@ -12,4 +12,16 @@ export class ShopPage2Component implements OnInit {
   ngOnInit() {
   }
 
+  carousel=[1,2,3,4,5];
+
+  backward() {
+    var imageback='back';
+    console.log(this.carousel[0]-1);
+  }
+
+  forward() {
+    var imagefor='forward';
+    console.log(imagefor);
+  }
 }
+
