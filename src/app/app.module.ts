@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login';
 import { FbauthComponent } from './_shared/fbauth/fbauth.component';
 import { GoogleauthComponent } from './_shared/googleauth/googleauth.component';
+import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule } from '@angular/material';
 // import { AdminComponent } from './admin/admin.component';
 
 //modules
@@ -19,6 +20,9 @@ import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLogi
 import { PageNotFoundComponent } from './_error/page-not-found/page-not-found.component';
 import { ShopPageComponent } from './landing/shop-page/shop-page.component';
 import { ItemCardComponent } from './_shared/item-card/item-card.component';
+import { CustomPageComponent } from './landing/custom-page/custom-page.component';
+import { SideComponent } from './landing/custom-page/side/side.component';
+import { NavComponent } from './landing/custom-page/nav/nav.component';
 
 let config = new AuthServiceConfig([
   {
@@ -39,7 +43,7 @@ export function provideConfig () {
   declarations: [
     AppComponent,
     LoginComponent,
-    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent,
+    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent, CustomPageComponent, SideComponent, NavComponent,
     // AdminComponent
   ],
   imports: [
@@ -49,6 +53,11 @@ export function provideConfig () {
     MaterialModule, AdminModule,
     WidgetModule,
     SocialLoginModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatSidenavModule,
   ],
   providers: [
     {
