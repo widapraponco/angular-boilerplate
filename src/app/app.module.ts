@@ -22,6 +22,7 @@ import { ShopPageComponent } from './landing/shop-page/shop-page.component';
 import { ItemCardComponent } from './_shared/item-card/item-card.component';
 import { ShopPage2Component } from './landing/shop-page2/shop-page2.component';
 import { PopupComponent } from './_shared/popup/popup.component';
+import { PopdialogComponent } from './_shared/popdialog/popdialog.component';
 
 let config = new AuthServiceConfig([
   {
@@ -42,11 +43,11 @@ export function provideConfig () {
   declarations: [
     AppComponent,
     LoginComponent,
-    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent, ShopPage2Component, PopupComponent,
+    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent, ShopPage2Component, PopupComponent, PopdialogComponent,
     // AdminComponent
   ],
   entryComponents: [
-    PopupComponent
+    PopupComponent, PopdialogComponent
   ],
   imports: [
     BrowserModule,

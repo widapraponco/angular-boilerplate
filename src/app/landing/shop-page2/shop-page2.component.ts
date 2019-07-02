@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { post } from 'selenium-webdriver/http';
-import {PopupComponent} from '../../_shared/popup/popup.component';
+import {PopdialogComponent} from '../../_shared/popdialog/popdialog.component';
 
 @Component({
   selector: 'app-shop-page2',
@@ -9,11 +10,22 @@ import {PopupComponent} from '../../_shared/popup/popup.component';
   styleUrls: ['./shop-page2.component.sass']
 })
 export class ShopPage2Component implements OnInit {
+  
+  animal: string;
+  name: string;
 
-  constructor(private _bottomSheet: MatBottomSheet) {}
+  constructor(public dialog: MatDialog) {}
 
-  openBottomSheet(): void {
-    this._bottomSheet.open(PopupComponent);
+  openDialog(): void {
+    const dialogRef = this.dialog.open(PopdialogComponent, {
+      width: '500px',
+      data: {name: this.name, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
   }
 
   ngOnInit() {
