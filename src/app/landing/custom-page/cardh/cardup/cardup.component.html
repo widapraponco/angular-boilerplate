@@ -16,9 +16,13 @@
       <mat-card-header>
         <mat-card-title >{{card.title}}</mat-card-title>
         <mat-card-subtitle> {{card.detl}} </mat-card-subtitle>
-        <div mat-card-avatar class="example-header-image" *ngFor="let card of the cards">
-         [img src]=" {{card.images}} "
+        <div mat-card-avatar class="example-header-image">
+          <img [src]="card.images" alt="" mat-card-avatar class="example-header-image">
         </div>
+        <span class="spacer"></span>
+        <!-- <div class="info">
+            <span class="discount block">129930</span>
+          </div> -->
       </mat-card-header>
     </mat-card>
     
