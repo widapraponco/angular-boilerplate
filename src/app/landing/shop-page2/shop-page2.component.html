@@ -69,20 +69,23 @@
         </div>
       </div>
   </div>
-  <div class="middle title">
-      <button mat-button><h4>Men</h4></button> |<button mat-button><h4>Woman</h4></button>|
-      <button mat-button><h4>Child</h4></button>
+  <div class="title">
+    <div class="middle" *ngFor="let button of buttons; let b=index">
+      <button mat-button ><h4>{{button.name}}</h4></button>
+      <span *ngIf="b < (buttons.length - 1)">{{button.split}}</span>
+    </div>
   </div>
   <div class="bottom title">
-    <div class="card" *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
+    <div class="card" *ngFor="let item of [1,2,3,4,5,6,7,8,9]; let j=index">
             <app-item-card
+            (click)="popup()"
               class="item-card center"
               [useDetails]="false"
               [useCartBtn]="false"
               [width]="180"
               [height]="300"
               [hImage]="250"
-              [bgColor]="'#D3D3D3'"
+              [bgColor]="warna(j)"
               ></app-item-card>
     </div>
   </div>

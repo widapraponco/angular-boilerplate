@@ -13,6 +13,15 @@ export class ShopPage2Component implements OnInit {
   ngOnInit() {
   }
 
+  kuning="#FFFACD";
+  merah="#F08080";
+
+  buttons=[
+    {id:1, name:'MAN', split:"|"},
+    {id:2, name:'WOMAN', split:"|"}, 
+    {id:3, name:'CHILD', split:"|"}
+  ];
+
   carousel=[
   {id:1, url:'https://placeimg.com/700/300/any',name:'Programer'},
   {id:2, url:'https://www.virginexperiencedays.co.uk/content/img/product/large/the-view-from-the-12102928.jpg',name:'Sunset'},
@@ -40,6 +49,20 @@ export class ShopPage2Component implements OnInit {
       else{
         console.log(this.carousel[this.i]);
       }
+  }
+
+  warna(j){
+    
+      if( j %2 == 0){
+        return this.kuning ;
+        }
+      else{
+        return this.merah ;
+        }
+  }
+  
+  popup(){
+
   }
 }
 
