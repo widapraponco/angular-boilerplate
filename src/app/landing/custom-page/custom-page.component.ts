@@ -4,6 +4,7 @@ import { ShopPageComponent } from '../shop-page/shop-page.component';
 import { SideComponent } from './side/side.component';
 import { ContentComponent } from './content/content.component';
 import { DashComponent } from './dash/dash.component';
+import { CardhComponent } from './cardh/cardh.component';
 
 @Component({
   selector: 'app-custom-page',

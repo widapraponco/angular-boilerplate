@@ -4,8 +4,7 @@
       class="sidenav"
       fixedInViewport="true"
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="!(isHandset$ | async)">
+      [mode]="(isHandset$ | async) ? 'over' : 'side'">
       <mat-toolbar color="primary">Menu</mat-toolbar>
       <button class="buttonr" mat-button> <mat-icon>view_quilt</mat-icon> Dashboard </button>
       <mat-nav-list class="sider" style="border: black;">

@@ -25,6 +25,8 @@ import { SideComponent } from './landing/custom-page/side/side.component';
 import { NavComponent } from './landing/custom-page/nav/nav.component';
 import { ContentComponent } from './landing/custom-page/content/content.component';
 import { DashComponent } from './landing/custom-page/dash/dash.component';
+import { CardhComponent } from './landing/custom-page/cardh/cardh.component';
+import { CardupComponent } from './landing/custom-page/cardh/cardup/cardup.component';
 
 let config = new AuthServiceConfig([
   {
@@ -45,7 +47,7 @@ export function provideConfig () {
   declarations: [
     AppComponent,
     LoginComponent,
-    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent, CustomPageComponent, SideComponent, NavComponent, ContentComponent, DashComponent,
+    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent, CustomPageComponent, SideComponent, NavComponent, ContentComponent, DashComponent, CardhComponent, CardupComponent,
     // AdminComponent
   ],
   imports: [

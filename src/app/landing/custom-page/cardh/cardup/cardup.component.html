@@ -1,0 +1,24 @@
+<!-- <mat-card class="card" style="height: 50px; width: 230px;">
+    <div class="header">
+      <div class="name">
+        <h2 class="lead">772382</h2>
+        <h3 class="lead">Visitor Online</h3>
+      </div>
+      <span class="spacer"></span>
+      <div class="info">
+        <span class="discount block"><mat-icon>face</mat-icon></span>
+      </div>
+    </div>
+
+  </mat-card>
+   -->
+   <mat-card class="example-card " *ngFor="let card of cards">
+      <mat-card-header>
+        <mat-card-title >{{card.title}}</mat-card-title>
+        <mat-card-subtitle> {{card.detl}} </mat-card-subtitle>
+        <div mat-card-avatar class="example-header-image" *ngFor="let card of the cards">
+         [img src]=" {{card.images}} "
+        </div>
+      </mat-card-header>
+    </mat-card>
+    
