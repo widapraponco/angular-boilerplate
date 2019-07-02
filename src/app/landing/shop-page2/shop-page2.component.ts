@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { post } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-shop-page2',
@@ -12,16 +13,33 @@ export class ShopPage2Component implements OnInit {
   ngOnInit() {
   }
 
-  carousel=[1,2,3,4,5];
+  carousel=[
+  {id:1, url:'https://placeimg.com/700/300/any',name:'Programer'},
+  {id:2, url:'https://www.virginexperiencedays.co.uk/content/img/product/large/the-view-from-the-12102928.jpg',name:'Sunset'},
+  {id:3, url:'https://s-ec.bstatic.com/images/hotel/max1024x768/175/175016579.jpg',name:'Sunrise'},
+  ];
+  i=0;
 
   backward() {
-    var imageback='back';
-    console.log(this.carousel[0]-1);
+    this.i=this.i-1
+      if(this.i < 0){
+        this.i=this.carousel.length-1
+        console.log(this.carousel[this.i]);
+      }
+      else{
+        console.log(this.carousel[this.i]);
+      }
   }
 
   forward() {
-    var imagefor='forward';
-    console.log(imagefor);
+    this.i=this.i+1
+      if(this.i >= this.carousel.length){
+        this.i=0
+        console.log(this.carousel[this.i]);
+      }
+      else{
+        console.log(this.carousel[this.i]);
+      }
   }
 }
 

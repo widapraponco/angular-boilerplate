@@ -42,9 +42,13 @@
             </span>
           </mat-grid-tile>
           <mat-grid-tile>
-            <img width="100%" src="https://placeimg.com/{{700}}/{{300}}/any" alt="like">
+            <img width="100%" [src]="carousel[i].url" [alt]="carousel[i].id">
           </mat-grid-tile>  
       </mat-grid-list>
+      <div class="bottom-up">
+        <span class="left"></span>
+        <span class="right title"><h3 class="my-10">{{carousel[i].name}}</h3></span>
+      </div>
       <div class="bottom-top">
         <div class="left">
           <button mat-button [matMenuTriggerFor]="menu">Product Details
