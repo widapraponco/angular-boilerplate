@@ -1,28 +1,38 @@
-<mat-toolbar  color="primary"  class="fixed-header">
+<!-- <mat-toolbar  color="primary"  class="fixed-header">
     <mat-toolbar-row>
-      <button mat-icon-button>
+        
+      <button mat-icon-button mat-button (click)="sidenav.toggle()">
         <mat-icon mat-icon-button>menu</mat-icon>
+     
       </button>
+   
     <span>Angular</span>
     <a  mat-button  routerLink="/customer-list"  routerLinkActive="active"></a>
     <a  mat-button  routerLink="/customer-create"></a>
     <a  mat-button  routerLink="/login"></a>
     <mat-icon>visibility</mat-icon>
     
-    <div style="right: 0px; padding-left: 900px;">
+    <div style="right: 0px; padding-left: 800px;">
+    <button mat-button [matMenuTriggerFor]="menu">Full Menu</button>
+    <mat-menu #menu="matMenu">
+    <button mat-menu-item>Menu 1</button>
+    <button mat-menu-item>Menu 2</button>
+    </mat-menu>&nbsp;
     <button mat-icon-button >
         <label for="mat-button-icon" style="background-color: brown; width: 5px; height: 5px;">12</label>
     <mat-icon mat-icon-button>inbox</mat-icon>
-    </button>
+    </button>&nbsp;
     <button mat-icon-button >
       <mat-icon mat-icon-button>supervised_user_circle</mat-icon>
     </button>
     </div>
     </mat-toolbar-row>
     </mat-toolbar>
-    <main>
+    <div class="content">
 
-    </main>
+    </div> -->
+    <app-nav></app-nav>
+   
     <!-- <mat-toolbar color="primary" class="fixed-header">
         <div class="mat-toolbar-tools">
             <div layout="row">

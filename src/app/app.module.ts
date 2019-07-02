@@ -23,6 +23,8 @@ import { ItemCardComponent } from './_shared/item-card/item-card.component';
 import { CustomPageComponent } from './landing/custom-page/custom-page.component';
 import { SideComponent } from './landing/custom-page/side/side.component';
 import { NavComponent } from './landing/custom-page/nav/nav.component';
+import { ContentComponent } from './landing/custom-page/content/content.component';
+import { DashComponent } from './landing/custom-page/dash/dash.component';
 
 let config = new AuthServiceConfig([
   {
@@ -43,7 +45,7 @@ export function provideConfig () {
   declarations: [
     AppComponent,
     LoginComponent,
-    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent, CustomPageComponent, SideComponent, NavComponent,
+    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent, CustomPageComponent, SideComponent, NavComponent, ContentComponent, DashComponent,
     // AdminComponent
   ],
   imports: [
