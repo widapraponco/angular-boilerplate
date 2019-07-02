@@ -1,46 +1,70 @@
-<mat-toolbar color="primary">
-
+<mat-toolbar  color="primary"  class="fixed-header">
     <mat-toolbar-row>
-  
       <button mat-icon-button>
-        <mat-icon mat-button (click)="drawer.toggle()">menu</mat-icon>
+        <mat-icon mat-icon-button>menu</mat-icon>
       </button>
-  
-      <span> Efnifv </span>
-  
-      <div fxFlex fxLayout fxLayoutAlign="flex-end">
-  
-        <ul fxLayout fxLayoutGap="20px">
-  
-          <li fxHide.xs>
-            <button mat-icon-button>
-              <mat-icon>settings</mat-icon>
-            </button>
-          </li>
-  
-          <li fxHide.xs>
-            <button mat-icon-button>
-              <mat-icon>help_outline</mat-icon>
-            </button>
-          </li>
-  
-          <li>
-            <button mat-icon-button [matMenuTriggerFor]="auth">
-              <mat-icon>person_outline</mat-icon>
-            </button>
-            <mat-menu #auth="matMenu">
-              <button mat-menu-item>
-                <mat-icon>exit_to_app</mat-icon>
-                <span>Sign out</span>
-              </button>
-            </mat-menu>
-          </li>
-  
-        </ul>
-  
-      </div>
-  
+    <span>Angular</span>
+    <a  mat-button  routerLink="/customer-list"  routerLinkActive="active"></a>
+    <a  mat-button  routerLink="/customer-create"></a>
+    <a  mat-button  routerLink="/login"></a>
+    <mat-icon>visibility</mat-icon>
+    
+    <div style="right: 0px; padding-left: 900px;">
+    <button mat-icon-button >
+        <label for="mat-button-icon" style="background-color: brown; width: 5px; height: 5px;">12</label>
+    <mat-icon mat-icon-button>inbox</mat-icon>
+    </button>
+    <button mat-icon-button >
+      <mat-icon mat-icon-button>supervised_user_circle</mat-icon>
+    </button>
+    </div>
     </mat-toolbar-row>
+    </mat-toolbar>
+    <main>
 
-  </mat-toolbar>
-
+    </main>
+    <!-- <mat-toolbar color="primary" class="fixed-header">
+        <div class="mat-toolbar-tools">
+            <div layout="row">
+                <i class="fa fa-users fa-2x" flex></i>
+                <h1 class="mat-title" style="color:white">Org Chart</h1>
+            </div>
+            <span flex></span>
+            <mat-fab-speed-dial mat-direction="left" ng-class="mat-fling">
+                <mat-fab-trigger>
+                    <mat-button aria-label="menu" class="mat-fab mat-accent">
+                        <mat-tooltip>
+                            Actions
+                        </mat-tooltip>
+                        <mat-icon mat-svg-src="img/icons/ic_view_module_48px.svg"></mat-icon>
+                    </mat-button>
+                </mat-fab-trigger>
+                <mat-fab-actions>
+                    <mat-button aria-label="view" class="mat-fab mat-raised mat-mini">
+                        <mat-tooltip>
+                            View Chart
+                        </mat-tooltip>
+                        <mat-icon mat-svg-src="" style="color:black" ng-show="cDP.read" ng-click="paneShowFn('read')"></mat-icon>
+                    </mat-button>
+                    <mat-button aria-label="add" class="mat-fab mat-raised mat-mini">
+                        <mat-tooltip>
+                            Add Chart
+                        </mat-tooltip>
+                        <mat-icon mat-svg-src="img/icons/ic_add_48px.svg" style="color:black" ng-show="cDP.insert" ng-click="paneShowFn('insert')"></mat-icon>
+                    </mat-button>
+                    <mat-button aria-label="Settings" class="mat-fab mat-raised mat-mini">
+                        <mat-tooltip>
+                            Security Access
+                        </mat-tooltip>
+                        <mat-icon mat-svg-src="img/icons/ic_add_48px.svg" style="color:black" ng-show="cDP.permission" ng-click="paneShowFn('permission')"></mat-icon>
+                    </mat-button>
+                    <mat-button aria-label="edit" class="mat-fab mat-raised mat-mini" style="color:black" ng-show="cDP.update" ng-click="paneShowFn('update')">
+                        <mat-tooltip>
+                            Edit Chart
+                        </mat-tooltip>
+                        <mat-icon mat-svg-src="img/icons/ic_edit_48px.svg" style="color:black"></mat-icon>
+                    </mat-button>
+                </mat-fab-actions>
+            </mat-fab-speed-dial>
+        </div>
+    </mat-toolbar> -->
