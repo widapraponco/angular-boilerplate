@@ -78,7 +78,7 @@
   <div class="bottom title">
     <div class="card" *ngFor="let item of [1,2,3,4,5,6,7,8,9]; let j=index">
             <app-item-card
-            (click)="popup()"
+            (click)="openBottomSheet()"
               class="item-card center"
               [useDetails]="false"
               [useCartBtn]="false"
@@ -89,10 +89,8 @@
               ></app-item-card>
     </div>
   </div>
-  <div class="footer">
-    <div class="title">
+  <div class="footer title">
     <button mat-button>CONTACT</button>/<button mat-button>MEDIA</button>/
     <button mat-button>LEGAL</button>/<button mat-button>COOKIES</button>
-    </div>
   </div>
 </div>

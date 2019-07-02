@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
 import { post } from 'selenium-webdriver/http';
+import {PopupComponent} from '../../_shared/popup/popup.component';
 
 @Component({
   selector: 'app-shop-page2',
@@ -8,7 +10,11 @@ import { post } from 'selenium-webdriver/http';
 })
 export class ShopPage2Component implements OnInit {
 
-  constructor() { }
+  constructor(private _bottomSheet: MatBottomSheet) {}
+
+  openBottomSheet(): void {
+    this._bottomSheet.open(PopupComponent);
+  }
 
   ngOnInit() {
   }
@@ -61,8 +67,5 @@ export class ShopPage2Component implements OnInit {
         }
   }
   
-  popup(){
-
-  }
 }
 

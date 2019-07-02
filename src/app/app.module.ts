@@ -21,6 +21,7 @@ import { PageNotFoundComponent } from './_error/page-not-found/page-not-found.co
 import { ShopPageComponent } from './landing/shop-page/shop-page.component';
 import { ItemCardComponent } from './_shared/item-card/item-card.component';
 import { ShopPage2Component } from './landing/shop-page2/shop-page2.component';
+import { PopupComponent } from './_shared/popup/popup.component';
 
 let config = new AuthServiceConfig([
   {
@@ -41,8 +42,11 @@ export function provideConfig () {
   declarations: [
     AppComponent,
     LoginComponent,
-    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent, ShopPage2Component,
+    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent, ShopPage2Component, PopupComponent,
     // AdminComponent
+  ],
+  entryComponents: [
+    PopupComponent
   ],
   imports: [
     BrowserModule,
