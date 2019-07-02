@@ -16,9 +16,15 @@
           <a mat-list-item href="#"><mat-icon>toys</mat-icon>&nbsp;Color</a>
           <a mat-list-item href="#"><mat-icon>help</mat-icon>&nbsp;Helper Class</a>
       </mat-nav-list>
+      <mat-toolbar style="border-top: 1px solid #555">Quick Link</mat-toolbar>
+      <mat-nav-list class="sider" style="border: black;">
+          <a mat-list-item href="#"><mat-icon>help</mat-icon>&nbsp;Help</a>
+          <a mat-list-item href="#"><mat-icon>contact_phone</mat-icon>&nbsp;Contact Person</a>
+          <a mat-list-item href="#"><mat-icon>contact_support</mat-icon>&nbsp;Email Support</a>
+      </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-      <mat-toolbar color="primary">
+      <mat-toolbar color="primary" style="position: fixed;">
         <button
           type="button"
           aria-label="Toggle sidenav"
@@ -34,9 +40,9 @@
             <button mat-menu-item>Menu 1</button>
             <button mat-menu-item>Menu 2</button>
             </mat-menu>&nbsp;
-            <button mat-icon-button >
+            <button mat-icon-button>
                 <!-- <label for="mat-button-icon" style="background-color: brown; width: 5px; height: 5px;">12</label> -->
-            <mat-icon mat-icon-button matBadge="12" matBadgeColor="warn">inbox</mat-icon>
+            <mat-icon matBadge="12" matBadgeColor="warn">inbox</mat-icon>
             </button>&nbsp;
             <button mat-icon-button >
               <mat-icon mat-icon-button>supervised_user_circle</mat-icon>

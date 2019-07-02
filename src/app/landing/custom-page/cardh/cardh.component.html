@@ -8,19 +8,45 @@
           <mat-card-header>  
             <mat-card-title>  
                
-              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">  
+              <!-- <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">  
                 <mat-icon>more_vert</mat-icon>  
               </button>  
-              <mat-menu #menu="matMenu" xPosition="before">  
+              <mat-menu #menu="matMenu" xPosition="before" >  
                 <button mat-menu-item>Expand</button>  
                 <button mat-menu-item>Remove</button>  
-              </mat-menu>  
+              </mat-menu>   -->
             </mat-card-title>  
           </mat-card-header>  
           <mat-card-content class="dashboard-card-content">  
-            <div></div>  
+            <!-- <div><app-tablec></app-tablec></div>   -->
           </mat-card-content>  
         </mat-card>  
       </mat-grid-tile>  
+
+      <mat-grid-tile *ngFor="let card1 of cards1" [colspan]="card1.cols" [rowspan]="card1.rows">  
+          <mat-card class="dashboard-card" hidden="1">  
+            <mat-card-header>  
+              <mat-card-title> 
+                <span>User Reports</span>
+              </mat-card-title>  
+            </mat-card-header>  
+            <mat-card-content class="dashboard-card-content">  
+              <div><app-tablec></app-tablec></div>  
+            </mat-card-content>  
+          </mat-card>  
+        </mat-grid-tile>  
+
+        <mat-grid-tile *ngFor="let card2 of cards2" [colspan]="card2.cols" [rowspan]="card2.rows">  
+            <mat-card class="dashboard-card">  
+              <mat-card-header>  
+                <mat-card-title>  
+                  <span>Recent Notifications</span>
+                </mat-card-title>  
+              </mat-card-header>  
+              <mat-card-content class="dashboard-card-content">  
+                <div><app-tablen></app-tablen></div>  
+              </mat-card-content>  
+            </mat-card>  
+          </mat-grid-tile>  
     </mat-grid-list>  
   </div>
