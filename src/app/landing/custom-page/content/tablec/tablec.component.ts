@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AngularFirestore } from 'angularfire2/firestore';
 
 @Component({
   selector: 'app-tablec',
@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class TablecComponent implements OnInit {
+  users: any;
   displayedColumns: string[] = ['position','images', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
-  constructor() { }
+  
+  constructor(db: AngularFirestore) {
+    this.users = db.collection('/user').valueChanges();
+}
 
   ngOnInit() {
   }

@@ -1,43 +1,26 @@
-<!-- <div class="grid-container">
-    <h1 class="mat-h1">Dashboard</h1>
-    <mat-grid-list cols="2" rowHeight="350px">
-      <mat-grid-tile >
-        <mat-card class="dashboard-card">
-          <mat-card-header>
-            <mat-card-title>
-              
-              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-                <mat-icon>more_vert</mat-icon>
-              </button>
-              <mat-menu #menu="matMenu" xPosition="before">
-                <button mat-menu-item>Expand</button>
-                <button mat-menu-item>Remove</button>
-              </mat-menu>
-            </mat-card-title>
-          </mat-card-header>
-          <mat-card-content class="dashboard-card-content">
-            <div>Card Content Here</div>
-          </mat-card-content>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </div> -->
-  <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
+<mat-toolbar color="primary">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle(sides)">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span>Angular</span>
+  
+  <div style="padding-left: 980px; ">
+      <button mat-button [matMenuTriggerFor]="menu">Full Menu</button>
+      <mat-menu #menu="matMenu">
+      <button mat-menu-item>Menu 1</button>
+      <button mat-menu-item>Menu 2</button>
+      </mat-menu>&nbsp;
+      <button mat-icon-button>
+          <!-- <label for="mat-button-icon" style="background-color: brown; width: 5px; height: 5px;">12</label> -->
+      <mat-icon matBadge="12" matBadgeColor="warn">inbox</mat-icon>
+      </button>&nbsp;
+      <button mat-icon-button >
+        <mat-icon mat-icon-button>supervised_user_circle</mat-icon>
+      </button>
+      </div>
+  
+</mat-toolbar>

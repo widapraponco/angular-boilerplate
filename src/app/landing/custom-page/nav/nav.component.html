@@ -23,18 +23,20 @@
           <a mat-list-item href="#"><mat-icon>contact_support</mat-icon>&nbsp;Email Support</a>
       </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content>
-      <mat-toolbar color="primary" style="position: fixed;">
+    <mat-sidenav-content style="position: fixed;">
+      <!-- TOp Bar -->
+      
+      <mat-toolbar color="primary" >
         <button
           type="button"
           aria-label="Toggle sidenav"
           mat-icon-button
-          (click)="drawer.toggle()">
+          (click)="drawerToggle(drawer)">
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
         <span>Angular</span>
-        
-        <div style="right: 0px; padding-left: 800px; position: fixed;">
+        <span class="spacer"></span>
+        <div mat-icon-button [ngClass]="{'side-right2':sideRight2, 'side-right':sideRight}">
             <button mat-button [matMenuTriggerFor]="menu">Full Menu</button>
             <mat-menu #menu="matMenu">
             <button mat-menu-item>Menu 1</button>
@@ -51,5 +53,6 @@
         
       </mat-toolbar>
       <!-- Add Content Here -->
+      <app-cardh></app-cardh>
     </mat-sidenav-content>
   </mat-sidenav-container>

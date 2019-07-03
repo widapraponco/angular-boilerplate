@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dash',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dash.component.sass']
 })
 export class DashComponent implements OnInit {
-
+  @Input()
+  public withSide = true;
   constructor() { }
 
   ngOnInit() {

@@ -1,6 +1,8 @@
 import { Component, OnInit , Input} from '@angular/core';
 import { TablecComponent } from '../content/tablec/tablec.component'
 import { TablenComponent } from '../content/tablen/tablen.component'
+
+
 @Component({
   selector: 'app-cardh',
   templateUrl: './cardh.component.html',

@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyAeZlULsFMdC_n7tLrdtIaIFpxV07xUZ2o',
+    authDomain: 'angular-pertama.firebaseapp.com',
+    databaseURL: 'https://angular-pertama.firebaseio.com',
+    projectId: 'angular-pertama',
+    storageBucket: 'angular-pertama.appspot.com',
+    messagingSenderId: '701095477269'
+}
 };
 
 /*
