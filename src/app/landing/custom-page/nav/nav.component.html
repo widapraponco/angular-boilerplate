@@ -8,8 +8,9 @@
       <mat-toolbar color="primary">Menu</mat-toolbar>
       <button class="buttonr" mat-button> <mat-icon>view_quilt</mat-icon> Dashboard </button>
       <mat-nav-list class="sider" style="border: black;">
-          <a mat-list-item href="#"><mat-icon>settings</mat-icon>&nbsp;UI</a>
-          <a mat-list-item href="#"><mat-icon>insert_chart</mat-icon>&nbsp;Chart</a>
+        <input type="text" *ngFor="let isi of kirim" name="" id="" value=" {{isi}} ">
+          <a mat-list-item (click)="kirim.push('UI')"><mat-icon>settings</mat-icon>&nbsp;UI</a>
+          <a mat-list-item (click)="kirim.push('Chart')"><mat-icon>insert_chart</mat-icon>&nbsp;Chart</a>
           <a mat-list-item href="#"><mat-icon>phonelink</mat-icon>&nbsp;Form</a>
           <a mat-list-item href="#"><mat-icon>computer</mat-icon>&nbsp;Tables</a>
           <a mat-list-item href="#"><mat-icon>developer_board</mat-icon>&nbsp;Grid</a>

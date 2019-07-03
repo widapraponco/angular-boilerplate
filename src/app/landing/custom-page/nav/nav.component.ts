@@ -7,10 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./nav.component.sass']
 })
 export class NavComponent implements OnInit {
+  kirim: string[] = [];
   @Input()
   public sideRight= true;
   public sideRight2= false;
-
+  
   constructor() { }
 
   ngOnInit() {
