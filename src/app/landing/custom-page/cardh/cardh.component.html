@@ -19,7 +19,16 @@
           </mat-card-header>  
           <mat-card-content class="dashboard-card-content">  
             <!-- <div><app-tablec></app-tablec></div>   -->
-            <p *ngFor="let h of hasil"> {{ h }} </p>
+            <!-- <p *ngFor="let h of hasil; trackBy: trackByFn;"> {{ h }} </p> -->
+            <div *ngFor=" let h of hasil;  let i=index">
+                <div *ngIf="i<8">
+              
+                        <b>{{h}} </b>
+                
+                   
+                </div>
+
+            </div>
           </mat-card-content>  
         </mat-card>  
       </mat-grid-tile>  

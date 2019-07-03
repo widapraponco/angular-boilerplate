@@ -11,6 +11,7 @@ import { cus } from '../cus.component';
   styleUrls: ['./cardh.component.sass']
 })
 export class CardhComponent implements OnInit {
+
   @Input() hasil: string;
 
   data = new cus('');
