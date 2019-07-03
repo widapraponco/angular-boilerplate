@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { CustomPageComponent } from '../custom-page.component';
+import { CardhComponent } from '../cardh/cardh.component';
 
 
 @Component({
@@ -7,12 +9,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./nav.component.sass']
 })
 export class NavComponent implements OnInit {
-  kirim: string[] = [];
+
+  isinya = [""];
   @Input()
   public sideRight= true;
   public sideRight2= false;
-  
+
+
   constructor() { }
+  kirim = [ "" ];
 
   ngOnInit() {
   }
@@ -21,5 +26,11 @@ export class NavComponent implements OnInit {
     e.toggle();
     // this.sideRight2 = !this.sideRight2;
   }
+  @ViewChild(CardhComponent) car: CardhComponent;
+  //  kirim: string[] = [];
+    // kirim(e){
+      
+    // }
+
 
 }

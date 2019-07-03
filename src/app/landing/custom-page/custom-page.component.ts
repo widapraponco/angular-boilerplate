@@ -13,7 +13,7 @@ import { CardhComponent } from './cardh/cardh.component';
 })
 export class CustomPageComponent implements OnInit {
 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit() {
   }

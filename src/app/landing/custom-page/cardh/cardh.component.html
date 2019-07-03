@@ -19,34 +19,19 @@
           </mat-card-header>  
           <mat-card-content class="dashboard-card-content">  
             <!-- <div><app-tablec></app-tablec></div>   -->
+            <p *ngFor="let h of hasil"> {{ h }} </p>
           </mat-card-content>  
         </mat-card>  
       </mat-grid-tile>  
 
-      <mat-grid-tile *ngFor="let card1 of cards1" [colspan]="card1.cols" [rowspan]="card1.rows">  
-          <mat-card class="dashboard-card" hidden="1">  
-            <mat-card-header>  
-              <mat-card-title> 
-                <span>User Reports</span>
-              </mat-card-title>  
-            </mat-card-header>  
-            <mat-card-content class="dashboard-card-content">  
-              <div><app-tablec></app-tablec></div>  
-            </mat-card-content>  
-          </mat-card>  
-        </mat-grid-tile>  
 
-        <mat-grid-tile *ngFor="let card2 of cards2" [colspan]="card2.cols" [rowspan]="card2.rows">  
-            <mat-card class="dashboard-card">  
-              <mat-card-header>  
-                <mat-card-title>  
-                  <span>Recent Notifications</span>
-                </mat-card-title>  
-              </mat-card-header>  
-              <mat-card-content class="dashboard-card-content">  
-                <div><app-tablen></app-tablen></div>  
-              </mat-card-content>  
-            </mat-card>  
-          </mat-grid-tile>  
     </mat-grid-list>  
   </div>
+  <div class="grid-c">
+  
+    <app-tablec class="grid-itema-l"></app-tablec>
+ 
+
+    <app-tablen class="grid-itema-r"></app-tablen>
+
+  </div>  

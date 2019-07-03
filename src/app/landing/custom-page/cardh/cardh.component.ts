@@ -1,6 +1,8 @@
 import { Component, OnInit , Input} from '@angular/core';
-import { TablecComponent } from '../content/tablec/tablec.component'
-import { TablenComponent } from '../content/tablen/tablen.component'
+import { TablecComponent } from '../content/tablec/tablec.component';
+import { TablenComponent } from '../content/tablen/tablen.component';
+import { NavComponent } from '../nav/nav.component';
+import { cus } from '../cus.component';
 
 
 @Component({
@@ -9,6 +11,10 @@ import { TablenComponent } from '../content/tablen/tablen.component'
   styleUrls: ['./cardh.component.sass']
 })
 export class CardhComponent implements OnInit {
+  @Input() hasil: string;
+
+  data = new cus('');
+
   cards = [  
     { id: 1, title: 'Card 1', cols: 2, rows: 1 }, 
   ];  
