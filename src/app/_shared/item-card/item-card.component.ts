@@ -12,9 +12,13 @@ export class ItemCardComponent implements OnInit {
   @Input() width : number = 150;
   @Input() height : number = 150;
 
-  @Input() hImage : number = 100;
+  @Input() hImage : number = 200;
 
   @Input() bgColor : string;
+  @Input() ItemName: string;
+  @Input() Satuan: string;
+  @Input() Diskon: string;
+  @Input() Harga: string;
 
   constructor() { }
 

@@ -35,6 +35,12 @@ export class ShopPage2Component implements OnInit {
 
   kuning="#FFFACD";
   merah="#F08080";
+  mn="man";
+  mns="let man of mans";
+  wmn="woman";
+  wmns="let woman of womans";
+  ch="child";
+  chs="let child of childs";
 
   buttons=[
     {id:1, name:'MAN', split:"|"},
@@ -42,8 +48,61 @@ export class ShopPage2Component implements OnInit {
     {id:3, name:'CHILD', split:"|"}
   ];
 
+  kategori= {
+    "MAN":[
+          {
+            name:"sepatu",
+            satuan:"pasang",
+            harga:" IDR 100 K",
+            diskon:"50%"},
+          {
+            name:"sepatu",
+            satuan:"pasang",
+            harga:" IDR 100 K",
+            diskon:"50%"},
+          {
+            name:"sepatu",
+            satuan:"pasang",
+            harga:" IDR 100 K",
+            diskon:"50%"}
+        ],
+   "WOMAN":[
+    {
+      name:"sepatu",
+      satuan:"pasang",
+      harga:" IDR 100 K",
+      diskon:"50%"},
+    {
+      name:"sepatu",
+      satuan:"pasang",
+      harga:" IDR 100 K",
+      diskon:"50%"},
+    {
+      name:"sepatu",
+      satuan:"pasang",
+      harga:" IDR 100 K",
+      diskon:"50%"}
+  ],
+  //  CHILD:[{name:"SEPATU1",satuan:"pasang",harga:" IDR 100 K",diskon:"50%"}]
+  }
+
+  mans=[
+    {name:"SEPATU",satuan:"pasang",harga:" IDR 100 K",diskon:"50%"},
+    {name:"KEMEJA",satuan:"pcs",harga:" IDR 200 K",diskon:"10%"},
+    {name:"CELANA",satuan:"pcs",harga:" IDR 250 K",diskon:"40%"}
+  ];
+  womans=[
+    {name:"SEPATU1",satuan:"pasang",harga:" IDR 100 K",diskon:"50%"},
+    {name:"KEMEJA11",satuan:"pcs",harga:" IDR 200 K",diskon:"10%"},
+    {name:"CELANA1",satuan:"pcs",harga:" IDR 250 K",diskon:"40%"}
+  ];
+  childs=[
+    {name:"SEPATU2",satuan:"pasang",harga:" IDR 100 K",diskon:"50%"},
+    {name:"KEMEJA2",satuan:"pcs",harga:" IDR 200 K",diskon:"10%"},
+    {name:"CELANA2",satuan:"pcs",harga:" IDR 250 K",diskon:"40%"}
+  ];
   carousel=[
-  {id:1, url:'https://placeimg.com/700/300/any',name:'Programer'},
+  {id:1, url:'https://placeimg.com/700/300/any',name:'Cloudy'},
   {id:2, url:'https://www.virginexperiencedays.co.uk/content/img/product/large/the-view-from-the-12102928.jpg',name:'Sunset'},
   {id:3, url:'https://s-ec.bstatic.com/images/hotel/max1024x768/175/175016579.jpg',name:'Sunrise'},
   ];
@@ -79,6 +138,12 @@ export class ShopPage2Component implements OnInit {
       else{
         return this.merah ;
         }
+  }
+
+  itemshow(topbutton){
+    
+    console.log(this.kategori[topbutton]);
+    
   }
   
 }
