@@ -78,7 +78,8 @@
   <div class="bottom title">
     <div class="card" *ngFor="let item of [1,2,3,4,5,6,7,8,9]; let j=index">
             <app-item-card
-            (click)="openDialog()"
+              #itemcard
+              (click)="openDialog(itemcard)"
               class="item-card center"
               [useDetails]="false"
               [useCartBtn]="false"

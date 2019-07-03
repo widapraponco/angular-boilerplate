@@ -13,17 +13,19 @@ export class ShopPage2Component implements OnInit {
   
   animal: string;
   name: string;
+  //src: string;
 
   constructor(public dialog: MatDialog) {}
 
-  openDialog(): void {
+  openDialog(itemcard): void {
     const dialogRef = this.dialog.open(PopdialogComponent, {
       width: '500px',
-      data: {name: this.name, animal: this.animal}
+      data: {name: this.name, animal: this.animal, src: itemcard.src }
+
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      console.log(itemcard);
       this.animal = result;
     });
   }

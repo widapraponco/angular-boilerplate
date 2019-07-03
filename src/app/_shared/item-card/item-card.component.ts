@@ -18,6 +18,8 @@ export class ItemCardComponent implements OnInit {
 
   constructor() { }
 
+  src: string ="https://placeimg.com/"+ this.width +"/"+ this.hImage +"/any";
+
   ngOnInit() {
   }
 
