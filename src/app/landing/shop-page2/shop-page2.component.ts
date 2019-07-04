@@ -12,8 +12,8 @@ import { StringifyOptions } from 'querystring';
 })
 export class ShopPage2Component implements OnInit {
   
-  animal: string;
-  name: string;
+  // animal: string;
+  // name: string;
   itemkart: StringifyOptions;
   
 
@@ -21,14 +21,14 @@ export class ShopPage2Component implements OnInit {
 
   openDialog(itemcard): void {
     const dialogRef = this.dialog.open(PopdialogComponent, {
-      width: '500px',
-      data: {name: this.name, animal: this.animal, src: itemcard.src }
+      width: '700px',
+      data: { src: itemcard.UrlImg, width: itemcard.width, height: itemcard.height  }
 
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(itemcard);
-      this.animal = result;
+     // this.animal = result;
     });
   }
 
@@ -36,8 +36,8 @@ export class ShopPage2Component implements OnInit {
     this.itemkart = this.kategoris['MAN'];
   }
 
-  kuning="#FFFACD";
-  merah="#F08080";
+  kuning="#463AF3";
+  merah="#7066FF";
   asal="MAN";
 
   buttons=[

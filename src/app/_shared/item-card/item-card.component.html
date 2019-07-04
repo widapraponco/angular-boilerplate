@@ -1,7 +1,7 @@
 <mat-card class="card" [ngStyle]="{'background-color': bgColor, 'width.px':width, 'height.px':height}">
   <div class="header">
     <div class="name">
-      <span class="lead">{{ItemName}}</span>
+      <span class="lead" color="white">{{ItemName}}</span>
     </div>
     <span class="spacer"></span>
     <div class="info">
@@ -24,6 +24,6 @@
     </mat-form-field>
   </div>
   <div class="footer" *ngIf="useCartBtn">
-    <button mat-flat-button color="primary">add to cart</button>
+    <button mat-flat-button>add to cart</button>
   </div>
 </mat-card>

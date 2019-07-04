@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="nav">
-      <mat-toolbar>
+      <mat-toolbar color="primary">
           <button mat-button [matMenuTriggerFor]="menu">
               <mat-icon matSuffix>sort</mat-icon>
           </button>
@@ -82,7 +82,7 @@
               (click)="openDialog(itemcard)"
               class="item-card center"
               [useDetails]="false"
-              [useCartBtn]="false"
+              [useCartBtn]="true"
               [width]="280"
               [height]="400"
               [hImage]="250"

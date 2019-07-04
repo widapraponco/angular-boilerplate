@@ -1,12 +1,27 @@
-<h1 mat-dialog-title>Hi {{data.src}}</h1>
 <div mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <mat-form-field>
-    <input matInput [(ngModel)]="data.animal">
-  </mat-form-field>
-  <img [src]="data.src" alt="item image">
+  <mat-grid-list cols="2" rowHeight="400px">
+    <mat-grid-tile>
+      <img [src]="data.src" alt="item image" [width]="data.width" [height]="data.height">
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="example-container">
+        <mat-form-field>
+          <input matInput placeholder="Masukkan Nama" [formControl]="nama" required>
+          <mat-error *ngIf="nama.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div><br><br>
+      <mat-form-field>
+        <mat-label>Pengiriman</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let Cargo of Cargos" [value]="Cargo.name">
+              {{Cargo.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+<div mat-dialog-actions class="footer">
+ <span class="center"> <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button></span>
 </div>
