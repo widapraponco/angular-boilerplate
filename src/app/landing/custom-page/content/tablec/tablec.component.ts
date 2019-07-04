@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { FormcComponent } from '../formc/formc.component';
 
 @Component({
   selector: 'app-tablec',

@@ -9,19 +9,9 @@ import { CardhComponent } from '../cardh/cardh.component';
   styleUrls: ['./nav.component.sass']
 })
 export class NavComponent implements OnInit {
-  //  isinya : string;
-  hasil : string;
-  // isinya : string[] = [];
-  // isi = this.isinya = this.isinya
-  isinya(nama){
-    if (nama = 'UI') {
-      this.hasil = nama;
-    } else if (nama = 'chart'){
-      this.hasil = nama;
-    }
-  }
+  isinya : string = "";
 
-  @Input()
+
   public sideRight= true;
   public sideRight2= false;
 
@@ -32,7 +22,26 @@ export class NavComponent implements OnInit {
   ngOnInit() {
 
   }
+  // set Isinya 
+  setIsinya(judul){
+    this.isinya = judul
+  }
 
+  menus = [
+    {id: 1, name: 'UI', icon: 'settings'},
+    {id: 2, name: 'Chart', icon: 'insert_chart'},
+    {id: 3, name: 'Form', icon: 'phonelink'},
+    {id: 4, name: 'Tables', icon: 'computer'},
+    {id: 5, name: 'Grid', icon: 'developer_board'},
+    {id: 6, name: 'Color', icon: 'toys'},
+    {id: 7, name: 'Helper Class', icon: 'help'},
+    // {id: [{ nama: ''}, {  }]   }
+  ];
+  menusb = [
+    {id: 1, name: 'Help', icon: 'help'},
+    {id: 2, name: 'Contact Phone', icon: 'contact_person'},
+    {id: 3, name: 'Contact Support', icon: 'contact_support'},
+  ];
   drawerToggle(e){
     e.toggle();
     // this.sideRight2 = !this.sideRight2;

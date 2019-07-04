@@ -8,21 +8,11 @@
       <mat-toolbar color="primary">Menu</mat-toolbar>
       <button class="buttonr" mat-button> <mat-icon>view_quilt</mat-icon> Dashboard </button>
       <mat-nav-list class="sider" style="border: black;">
-        <!-- <input type="text" *ngFor="let isi of kirim" name="" id="" value=" {{isi}} "> -->
-          <a mat-list-item (click)="isinya('UI')"><mat-icon>settings</mat-icon>&nbsp;UI</a>
-          <a mat-list-item (click)="isinya('Chart')"><mat-icon>insert_chart</mat-icon>&nbsp;Chart</a>
-          <a mat-list-item (click)="isinya('Form')"><mat-icon>phonelink</mat-icon>&nbsp;Form</a>
-          <a mat-list-item (click)="isinya('Tables')"><mat-icon>computer</mat-icon>&nbsp;Tables</a>
-          <a mat-list-item (click)="isinya('Grid')"><mat-icon>developer_board</mat-icon>&nbsp;Grid</a>
-          <a mat-list-item (click)="isinya('Color')"><mat-icon>toys</mat-icon>&nbsp;Color</a>
-          <a mat-list-item (click)="isinya('Helper Class')"><mat-icon>help</mat-icon>&nbsp;Helper Class</a>
+          <a mat-list-item (click)="setIsinya(menu.name)" *ngFor="let menu of menus"><mat-icon>{{menu.icon}}</mat-icon>&nbsp; {{menu.name}} </a>
       </mat-nav-list>
-
       <mat-toolbar style="border-top: 1px solid #555">Quick Link</mat-toolbar>
       <mat-nav-list class="sider" style="border: black;">
-          <a mat-list-item href="#"><mat-icon>help</mat-icon>&nbsp;Help</a>
-          <a mat-list-item href="#"><mat-icon>contact_phone</mat-icon>&nbsp;Contact Person</a>
-          <a mat-list-item href="#"><mat-icon>contact_support</mat-icon>&nbsp;Email Support</a>
+          <a mat-list-item (click)="setIsinya(menu.name)" *ngFor="let menu of menusb"><mat-icon>{{menu.icon}}</mat-icon>&nbsp; {{menu.name}} </a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content style="position: fixed;">
