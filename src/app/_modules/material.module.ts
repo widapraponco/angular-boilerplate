@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatCardModule, MatIconModule, MatDividerModule,
   MatFormFieldModule, MatInputModule, MatToolbarModule, MatSidenavModule, MatGridListModule,
-  MatMenuModule, MatBadgeModule, MatSelectModule, MatListModule,MatTableModule} from '@angular/material';
+  MatMenuModule, MatBadgeModule, MatSelectModule, MatListModule,MatTableModule,MatDialogModule} from '@angular/material';
 
 @NgModule({
   declarations: [],
@@ -11,13 +11,13 @@ import {MatButtonModule, MatCheckboxModule, MatCardModule, MatIconModule, MatDiv
     CommonModule,
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatToolbarModule,
-    MatCardModule, MatIconModule, MatDividerModule, MatSidenavModule,
+    MatCardModule, MatIconModule, MatDividerModule, MatSidenavModule,MatDialogModule,
     MatMenuModule, MatBadgeModule, MatSelectModule, MatListModule, MatGridListModule,MatTableModule,
   ],
   exports: [
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatToolbarModule,
-    MatCardModule, MatIconModule, MatDividerModule, MatSidenavModule,
+    MatCardModule, MatIconModule, MatDividerModule, MatSidenavModule,MatDialogModule,
     MatMenuModule, MatBadgeModule, MatSelectModule, MatListModule, MatGridListModule,MatTableModule,
   ]
 })

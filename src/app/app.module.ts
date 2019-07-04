@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login';
 import { FbauthComponent } from './_shared/fbauth/fbauth.component';
 import { GoogleauthComponent } from './_shared/googleauth/googleauth.component';
-import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule, MatSidenavModule } from '@angular/material';
+import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule,
+         MatDialogModule, MatSidenavModule } from '@angular/material';
 // import { AdminComponent } from './admin/admin.component';
 
 //modules
@@ -32,6 +33,8 @@ import { CardhComponent } from './landing/custom-page/cardh/cardh.component';
 import { CardupComponent } from './landing/custom-page/cardh/cardup/cardup.component';
 import { TablecComponent } from './landing/custom-page/content/tablec/tablec.component';
 import { TablenComponent } from './landing/custom-page/content/tablen/tablen.component';
+import { FormcComponent } from './landing/custom-page/content/formc/formc.component';
+import { FormcDialogComponent } from './landing/custom-page/content/formc/formc.component';
 
 let config = new AuthServiceConfig([
   {
@@ -51,8 +54,11 @@ export function provideConfig () {
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    FbauthComponent, GoogleauthComponent, PageNotFoundComponent, ShopPageComponent, ItemCardComponent, CustomPageComponent, SideComponent, NavComponent, ContentComponent, DashComponent, CardhComponent, CardupComponent, TablecComponent, TablenComponent,
+    LoginComponent,FormcComponent,FormcDialogComponent,
+    FbauthComponent, GoogleauthComponent, PageNotFoundComponent,
+    ShopPageComponent, ItemCardComponent, CustomPageComponent, SideComponent, 
+    NavComponent, ContentComponent, DashComponent, CardhComponent, CardupComponent, 
+    TablecComponent, TablenComponent,
     // AdminComponent
   ],
   imports: [
@@ -65,7 +71,7 @@ export function provideConfig () {
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule,
+    MatCardModule,MatDialogModule,
     MatSidenavModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
@@ -76,6 +82,7 @@ export function provideConfig () {
       useFactory: provideConfig
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ FormcDialogComponent ],
 })
 export class AppModule { }

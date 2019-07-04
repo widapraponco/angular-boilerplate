@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { CustomPageComponent } from '../custom-page.component';
 import { CardhComponent } from '../cardh/cardh.component';
+import { FormcComponent } from '../content/formc/formc.component';
 
 
 @Component({
