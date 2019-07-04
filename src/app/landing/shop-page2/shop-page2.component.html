@@ -76,7 +76,7 @@
     </div>
   </div>
   <div class="bottom title">
-    <div class="card" *ngFor="let man of mans; let j=index">
+    <div class="card" *ngFor="let kategori of itemkart; let j=index">
             <app-item-card
               #itemcard
               (click)="openDialog(itemcard)"
@@ -87,10 +87,11 @@
               [height]="400"
               [hImage]="250"
               [bgColor]="warna(j)"
-              [ItemName]="man.name"
-              [Satuan]="man.satuan"
-              [Harga]="man.harga"
-              [Diskon]="man.diskon"
+              [UrlImg]="kategori.img"
+              [ItemName]="kategori.name"
+              [Satuan]="kategori.satuan"
+              [Harga]="kategori.harga"
+              [Diskon]="kategori.diskon"
               ></app-item-card>
     </div>
   </div>

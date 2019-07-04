@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+//import { url } from 'inspector';
 
 @Component({
   selector: 'app-item-card',
@@ -19,10 +20,11 @@ export class ItemCardComponent implements OnInit {
   @Input() Satuan: string;
   @Input() Diskon: string;
   @Input() Harga: string;
+  @Input() UrlImg: string;
 
   constructor() { }
 
-  src: string ="https://placeimg.com/"+ this.width +"/"+ this.hImage +"/any";
+  //src: string ="https://placeimg.com/"+ this.width +"/"+ this.hImage +"/any";
 
   ngOnInit() {
   }
