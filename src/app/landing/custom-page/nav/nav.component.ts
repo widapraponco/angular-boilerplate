@@ -9,8 +9,18 @@ import { CardhComponent } from '../cardh/cardh.component';
   styleUrls: ['./nav.component.sass']
 })
 export class NavComponent implements OnInit {
+  //  isinya : string;
+  hasil : string;
+  // isinya : string[] = [];
+  // isi = this.isinya = this.isinya
+  isinya(nama){
+    if (nama = 'UI') {
+      this.hasil = nama;
+    } else if (nama = 'chart'){
+      this.hasil = nama;
+    }
+  }
 
-  isinya = [""];
   @Input()
   public sideRight= true;
   public sideRight2= false;
@@ -20,6 +30,7 @@ export class NavComponent implements OnInit {
   kirim = [ "" ];
 
   ngOnInit() {
+
   }
 
   drawerToggle(e){
@@ -31,6 +42,5 @@ export class NavComponent implements OnInit {
     // kirim(e){
       
     // }
-
-
+ 
 }

@@ -14,6 +14,7 @@ export class CardhComponent implements OnInit {
 
   @Input() hasil: string;
 
+  
   data = new cus('');
 
   cards = [  
@@ -28,6 +29,7 @@ export class CardhComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.hasil);
   }
 
 }
