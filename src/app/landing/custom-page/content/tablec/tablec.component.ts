@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { FormcComponent } from '../formc/formc.component';
-import { Data } from '../formc/data';
+import { FormcdataService } from '../../../../_services/formcdata.service';
 import { database } from 'firebase';
 
 @Component({
@@ -11,10 +11,10 @@ import { database } from 'firebase';
 
 })
 export class TablecComponent implements OnInit {
-  data = new Data();
+  data = new FormcdataService();
   users: any;
   displayedColumns : string[] = ['no', 'images', 'name', 'address', 'no_telp'];
-  dataSource = [this.data];
+  dataSource = ELEMENT_DATA;
 
   constructor(db: AngularFirestore) {
     this.users = db.collection('/user').valueChanges();
@@ -28,7 +28,7 @@ export class TablecComponent implements OnInit {
 export interface PeriodicElement {
   no: string;
   images: 'https://material.angular.io/assets/img/examples/shiba1.jpg';
-  name: 'hafid';
+  name: string;
   address: string;
   no_telp: string;
 }

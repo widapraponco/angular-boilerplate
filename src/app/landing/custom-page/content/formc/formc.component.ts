@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { Data } from './data';
+import { FormcdataService } from '../../../../_services/formcdata.service';
 
 // export interface DialogData {
 //   no: number;
@@ -15,7 +15,7 @@ import { Data } from './data';
   styleUrls: ['./formc.component.sass']
 })
 export class FormcComponent implements OnInit {
-  data = new Data();
+  data = new FormcdataService();
   // no: number;
   // images: 'https://material.angular.io/assets/img/examples/shiba1.jpg';
   // name: string;
@@ -32,19 +32,21 @@ export class FormcComponent implements OnInit {
       width: '250px',
       data: this.data
     });
-
     dialogRef.afterClosed().subscribe(result => {
-      console.log('Success');
+      console.log(this.data);
       // this.no = result;
       // this.images = result;
       // this.name = result;
       // this.address = result;
       // this.no_telp = result;
       // this.name = result;
-  
+      // this.data = result;
       alert("Hasil Data: " + JSON.stringify(this.data));
     });
   }
+  // onSubmit(){
+  //   console.log(this.data);
+  // }
 }
 
 
@@ -56,9 +58,9 @@ export class FormcDialogComponent {
 
   constructor(
     public dialogRef: MatDialogRef<FormcDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Data) {}
+    @Inject(MAT_DIALOG_DATA) public data: FormcdataService) {}
 
-  onNoClick(): void {
+  NoClick(): void {
     this.dialogRef.close();
   }
 

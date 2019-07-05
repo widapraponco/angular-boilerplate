@@ -16,7 +16,7 @@
             <input matInput placeholder="No Telp" [(ngModel)]="data.no_telp" id="no_telp">
         </mat-form-field>
         <div mat-dialog-actions>
-         <button mat-button (click)="onNoClick()">Cancel</button>
-         <button mat-button [mat-dialog-close] cdkFocusInitial>Ok</button>
+         <button mat-button (click)="NoClick()">Cancel</button>
+         <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
         </div>
 </div>
