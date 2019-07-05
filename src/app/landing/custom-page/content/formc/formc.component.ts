@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { FormcdataService } from '../../../../_services/formcdata.service';
+import { stringify } from '@angular/core/src/render3/util';
 
 // export interface DialogData {
 //   no: number;
@@ -15,14 +16,14 @@ import { FormcdataService } from '../../../../_services/formcdata.service';
   styleUrls: ['./formc.component.sass']
 })
 export class FormcComponent implements OnInit {
-  data = new FormcdataService();
+  // data = new FormcdataService();
   // no: number;
   // images: 'https://material.angular.io/assets/img/examples/shiba1.jpg';
   // name: string;
   // address: string;
   // no_telp: number;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, public data: FormcdataService) { }
 
   ngOnInit() {
   }
@@ -32,17 +33,17 @@ export class FormcComponent implements OnInit {
       width: '250px',
       data: this.data
     });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(this.data);
-      // this.no = result;
-      // this.images = result;
-      // this.name = result;
-      // this.address = result;
-      // this.no_telp = result;
-      // this.name = result;
-      // this.data = result;
-      alert("Hasil Data: " + JSON.stringify(this.data));
-    });
+    // dialogRef.afterClosed().subscribe(result => {
+      
+    //   this.no = result;
+    //   this.images = result;
+    //   this.name = result;
+    //   this.address = result;
+    //   this.no_telp = result;
+    //   this.name = result;
+    //   this.data = result;
+    //   alert("Hasil Data: " + JSON.stringify(this.data));
+    // });
   }
   // onSubmit(){
   //   console.log(this.data);
@@ -58,10 +59,15 @@ export class FormcDialogComponent {
 
   constructor(
     public dialogRef: MatDialogRef<FormcDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: FormcdataService) {}
+     public data: FormcdataService) {}
 
-  NoClick(): void {
-    this.dialogRef.close();
+  // NoClick(): void {
+  //   this.dialogRef.close();
+  // }
+  addItem(no,images,name,address,no_telp){
+   var item = {no: no, images: images, name: name, address: address, no_telp: no_telp};
+    this.data.addItem(item);
   }
+
 
 }

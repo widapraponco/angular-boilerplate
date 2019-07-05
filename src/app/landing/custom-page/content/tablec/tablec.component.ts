@@ -11,27 +11,29 @@ import { database } from 'firebase';
 
 })
 export class TablecComponent implements OnInit {
-  data = new FormcdataService();
+  // data = new FormcdataService();
+  
   users: any;
   displayedColumns : string[] = ['no', 'images', 'name', 'address', 'no_telp'];
-  dataSource = ELEMENT_DATA;
-
-  constructor(db: AngularFirestore) {
-    this.users = db.collection('/user').valueChanges();
+  // dataSource: Array<any>;
+  dataSource = this.data.getItem();
+  constructor(private data : FormcdataService) {
+    // console.log(this.data);
 }
 
   ngOnInit() {
+    
   }
 
 
 }
-export interface PeriodicElement {
-  no: string;
-  images: 'https://material.angular.io/assets/img/examples/shiba1.jpg';
-  name: string;
-  address: string;
-  no_telp: string;
-}
+// export interface PeriodicElement {
+//   no: string;
+//   images: string;
+//   name: string;
+//   address: string;
+//   no_telp: string;
+// }
 
 // const ELEMENT_DATA: PeriodicElement[] = [
 //   {position: 1, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
@@ -45,6 +47,7 @@ export interface PeriodicElement {
 //   {position: 9, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Fluorine', weight: 18.9984, symbol: 'F' },
 //   {position: 10, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 // ];
-const ELEMENT_DATA: PeriodicElement[] = [
-  {no: '1', images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'hafid', address: 'Lumajang', no_telp: '0998'},
-];
+// const ELEMENT_DATA: PeriodicElement[] = [
+//   {no: '1', images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'hafid', address: 'Lumajang', no_telp: '0998'},
+// ];
+

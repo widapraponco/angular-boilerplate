@@ -1,14 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'; 
+// import { FormcComponent } from '../landing/custom-page/content/formc/formc.component'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class FormcdataService {
+  datas = []
+  constructor() { 
+  }
 
-  constructor(
-    public no?: string,
-    public images?: string,
-    public name?: string,
-    public address?: string,
-    public no_telp?: string,) { }
+  addItem(item){
+    this.datas.push(item);
+  }
+  getItem(){
+    console.log(this.datas)
+    return this.datas;
+  }
 }

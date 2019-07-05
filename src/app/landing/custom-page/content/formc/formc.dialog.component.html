@@ -1,22 +1,22 @@
 <div class="example-container">
         <mat-form-field>
-            <input matInput placeholder="No" [(ngModel)]="data.no" id="no">
+            <input matInput placeholder="No" [(ngModel)]="no" id="no">
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Link Images or Default</mat-label>
-            <input matInput placeholder="Images (LInk)" [(ngModel)]="data.images" id="images">
+            <input matInput placeholder="Images (LInk)" [(ngModel)]="images" id="images">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Nama" [(ngModel)]="data.name" id="name">
+            <input matInput placeholder="Nama" [(ngModel)]="name" id="name">
         </mat-form-field>   
         <mat-form-field>
-            <input matInput placeholder="Alamat" [(ngModel)]="data.address" id="address">
+            <input matInput placeholder="Alamat" [(ngModel)]="address" id="address">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="No Telp" [(ngModel)]="data.no_telp" id="no_telp">
+            <input matInput placeholder="No Telp" [(ngModel)]="no_telp" id="no_telp">
         </mat-form-field>
         <div mat-dialog-actions>
-         <button mat-button (click)="NoClick()">Cancel</button>
-         <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+         <button mat-button [mat-dialog-close] >Cancel</button>
+         <button mat-button [mat-dialog-close] (click)="addItem(no,images,name,address,no_telp)" cdkFocusInitial>Ok</button>
         </div>
 </div>

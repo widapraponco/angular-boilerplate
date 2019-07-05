@@ -19,6 +19,9 @@ import { MaterialModule } from './_modules';
 import { AdminModule } from './admin/admin.module';
 import { WidgetModule } from './_shared/widget/widget.module';
 
+// Services
+import { FormcdataService } from './_services/formcdata.service';
+
 //plugin
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
 import { PageNotFoundComponent } from './_error/page-not-found/page-not-found.component';
@@ -79,8 +82,9 @@ export function provideConfig () {
   providers: [
     {
       provide: AuthServiceConfig,
-      useFactory: provideConfig
-    }
+      useFactory: provideConfig,
+    },
+    FormcdataService,
   ],
   bootstrap: [AppComponent],
   entryComponents: [ FormcDialogComponent ],

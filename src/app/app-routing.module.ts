@@ -15,7 +15,8 @@ const routes: Routes = [
   {path: 'admin', component: AdminComponent},
   {path: 'landing/shop', component: ShopPageComponent},
   {path: 'landing/custom', component: CustomPageComponent},
-  { path: '',   redirectTo: '/login', pathMatch: 'full' },
+  // { path: '',   redirectTo: '/login', pathMatch: 'full' },
+  { path: '',   redirectTo: '/landing/custom', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
