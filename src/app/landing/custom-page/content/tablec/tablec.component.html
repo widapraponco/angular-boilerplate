@@ -1,36 +1,28 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  
-    <!-- Position Column -->
-    <ng-container matColumnDef="no">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.no}} </td>
-    </ng-container>
+<table class="mat-elevation-z8 table-line">
+  <thead>
+      <p style="float: left; display: block; margin-left: 10px;">Data Users</p>
+   <tr>
+      
+      <button mat-raised-button (click)="openDialog()" style="float: right; display: block; margin-left: 10px; margin-top: 5px; left: 80px;"> Add Data</button>
 
-    <!-- Logo Column -->
-    <ng-container matColumnDef="images">
-        <th mat-header-cell *matHeaderCellDef> <mat-icon>supervisor_account</mat-icon></th>
-        <td mat-cell *matCellDef="let element"> <img [src]="element.images" alt="" style="background-size: cover; border-radius: 50px; width: 35px; height: 35px;"> </td>
-      </ng-container>
-    
-  
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container matColumnDef="address">
-      <th mat-header-cell *matHeaderCellDef> Address </th>
-      <td mat-cell *matCellDef="let element"> {{element.address}} </td>
-    </ng-container>
-  
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="no_telp">
-      <th mat-header-cell *matHeaderCellDef> No Telp </th>
-      <td mat-cell *matCellDef="let element"> {{element.no_telp}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+   </tr>
+       
+    <tr>
+      <th >No</th>
+      <th ><mat-icon>supervisor_account</mat-icon></th>
+      <th >Name</th>
+      <th >Address</th>
+      <th >No.Telp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of dataSource ">
+      <td >{{ item.no }}</td>
+      <td ><img [src]="item.images" alt="" style="background-size: cover; border-radius: 50px; width: 35px; height: 35px;"></td>
+      <td >{{ item.name }}</td>
+      <td >{{ item.address }}</td>
+      <td >{{ item.no_telp }}</td>
+      <!-- <td><a href="#" ng-click="delete($index)">Delete</a></td> -->
+    </tr>
+  </tbody>
   </table>

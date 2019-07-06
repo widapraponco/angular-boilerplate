@@ -4,6 +4,7 @@ import { FormcComponent } from '../formc/formc.component';
 import { FormcdataService } from '../../../../_services/formcdata.service';
 import { database } from 'firebase';
 
+
 @Component({
   selector: 'app-tablec',
   templateUrl: './tablec.component.html',
@@ -12,41 +13,17 @@ import { database } from 'firebase';
 })
 export class TablecComponent implements OnInit {
   // data = new FormcdataService();
-  
-  users: any;
   displayedColumns : string[] = ['no', 'images', 'name', 'address', 'no_telp'];
-  // dataSource: Array<any>;
   dataSource = this.data.getItem();
+  
   constructor(private data : FormcdataService) {
-    // console.log(this.data);
+    console.log(this.dataSource);
 }
-
   ngOnInit() {
-    
+  
   }
-
-
 }
-// export interface PeriodicElement {
-//   no: string;
-//   images: string;
-//   name: string;
-//   address: string;
-//   no_telp: string;
-// }
 
-// const ELEMENT_DATA: PeriodicElement[] = [
-//   {position: 1, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-//   {position: 2, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Helium', weight: 4.0026, symbol: 'He' },
-//   {position: 3, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Lithium', weight: 6.941, symbol: 'Li' },
-//   {position: 4, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-//   {position: 5, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Boron', weight: 10.811, symbol: 'B'},
-//   {position: 6, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Carbon', weight: 12.0107, symbol: 'C' },
-//   {position: 7, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-//   {position: 8, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-//   {position: 9, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-//   {position: 10, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-// ];
 // const ELEMENT_DATA: PeriodicElement[] = [
 //   {no: '1', images: 'https://material.angular.io/assets/img/examples/shiba1.jpg', name: 'hafid', address: 'Lumajang', no_telp: '0998'},
 // ];
