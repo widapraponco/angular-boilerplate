@@ -22,32 +22,23 @@ export class FormcComponent implements OnInit {
   // name: string;
   // address: string;
   // no_telp: number;
+  image = []
 
-  constructor(public dialog: MatDialog, public data: FormcdataService) { }
+  constructor(public dialog: MatDialog,public dialogRef: MatDialogRef<FormcDialogComponent>, public data: FormcdataService) { }
 
   ngOnInit() {
   }
-  
-  openDialog(): void {
-    const dialogRef = this.dialog.open(FormcDialogComponent, {
-      width: '250px',
-      data: this.data
-    });
-    // dialogRef.afterClosed().subscribe(result => {
-      
-    //   this.no = result;
-    //   this.images = result;
-    //   this.name = result;
-    //   this.address = result;
-    //   this.no_telp = result;
-    //   this.name = result;
-    //   this.data = result;
-    //   alert("Hasil Data: " + JSON.stringify(this.data));
-    // });
+
+  itemImage = [
+    {no: 1, images: 'https://material.angular.io/assets/img/examples/shiba1.jpg'},
+    {no: 2, images: 'https://material.angular.io/assets/img/examples/shiba2.jpg'},
+  ]
+
+  getImage(images){
+    this.image = images
+    console.log(this.image)
   }
-  // onSubmit(){
-  //   console.log(this.data);
-  // }
+
 }
 
 
@@ -57,7 +48,7 @@ export class FormcComponent implements OnInit {
 })
 export class FormcDialogComponent {
 
-  constructor(
+  constructor( public dialog: MatDialog,
     public dialogRef: MatDialogRef<FormcDialogComponent>,
      public data: FormcdataService) {}
 
@@ -68,6 +59,13 @@ export class FormcDialogComponent {
    var item = {no: no, images: images, name: name, address: address, no_telp: no_telp};
     this.data.addItem(item);
   }
-
+  
+  openDialog(): void {
+    const dialogRef = this.dialog.open(FormcComponent, {
+      width: '500px',
+      height: '500px',
+      data: this.data
+    });
+  }
 
 }

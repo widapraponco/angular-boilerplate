@@ -2,7 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "types": []
   },
   "exclude": [

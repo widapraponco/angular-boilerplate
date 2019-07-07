@@ -86,6 +86,6 @@ export function provideConfig () {
     FormcdataService,
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ FormcDialogComponent ],
+  entryComponents: [ FormcDialogComponent,FormcComponent ],
 })
 export class AppModule { }

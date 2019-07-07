@@ -2,10 +2,11 @@
         <mat-form-field>
             <input matInput placeholder="No" [(ngModel)]="no" id="no">
         </mat-form-field>
-        <mat-form-field appearance="outline">
+        <mat-form-field>
             <mat-label>Link Images or Default</mat-label>
-            <input matInput placeholder="Images (LInk)" [(ngModel)]="images" id="images">
+            <input matInput placeholder="Images (LInk)" [(ngModel)]="images" id="images" (click)="openDialog()" value="image">
         </mat-form-field>
+        <div><img [src]="images" alt="" style="background-size: cover; border-radius: 50px; width: 35px; height: 35px;"></div>
         <mat-form-field>
             <input matInput placeholder="Nama" [(ngModel)]="name" id="name">
         </mat-form-field>   
