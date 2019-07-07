@@ -1,6 +1,6 @@
 <div class="example-container">
     <div *ngFor="let im of itemImage">
-        <img  [src]="im.images" alt=""  (click)="getImage(im.images)">
+        <img  [src]="im.images" alt=""  (click)="addImage(im.images)">
     </div>
     <div mat-dialog-actions>
          <button mat-button [mat-dialog-close] >Cancel</button>

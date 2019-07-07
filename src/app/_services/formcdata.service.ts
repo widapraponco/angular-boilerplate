@@ -8,6 +8,7 @@ import { map, take } from 'rxjs/operators';
 })
 export class FormcdataService {
   datas: any = []
+  image = []
   constructor() { 
   }
 
@@ -19,5 +20,9 @@ export class FormcdataService {
     // console.log(this.datas)
     return this.datas
       
+  }
+  getImage(images){
+    this.image = images
+    console.log(this.image)
   }
 }

@@ -34,9 +34,8 @@ export class FormcComponent implements OnInit {
     {no: 2, images: 'https://material.angular.io/assets/img/examples/shiba2.jpg'},
   ]
 
-  getImage(images){
-    this.image = images
-    console.log(this.image)
+  addImage(images){
+    this.data.getImage(images);
   }
 
 }
