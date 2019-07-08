@@ -1,9 +1,13 @@
 <div class="example-container">
-    <div *ngFor="let im of itemImage">
-        <img  [src]="im.images" alt=""  (click)="addImage(im.images)">
-    </div>
+    <!-- <div *ngFor="let im of itemImage">
+        <img  [src]="im.images" alt="" (click)="addImage(im.images)">
+    </div> -->
+    <label *ngFor="let im of itemImage">
+        <input type="radio" name="pilih" [value]="im.images" [(ngModel)]="images">
+        <img [src]="im.images" class="img-responsive" alt="" style="background-size: cover; border-radius: 50px; width: 35px; height: 35px;">
+    </label>
     <div mat-dialog-actions>
          <button mat-button [mat-dialog-close] >Cancel</button>
-         <button mat-button [mat-dialog-close] (click)="addItem(no,images,name,address,no_telp)" cdkFocusInitial>Ok</button>
+         <button mat-button [mat-dialog-close] (click)="addImage(images)" cdkFocusInitial>Ok</button>
     </div>
 </div>

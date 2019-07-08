@@ -11,7 +11,7 @@ import { LoginComponent } from './login';
 import { FbauthComponent } from './_shared/fbauth/fbauth.component';
 import { GoogleauthComponent } from './_shared/googleauth/googleauth.component';
 import { MatMenuModule, MatButtonModule, MatIconModule, MatCardModule,
-         MatDialogModule, MatSidenavModule } from '@angular/material';
+         MatDialogModule, MatSidenavModule, MatRadioModule } from '@angular/material';
 // import { AdminComponent } from './admin/admin.component';
 
 
@@ -76,7 +76,7 @@ export function provideConfig () {
     MatCardModule,MatDialogModule,
     MatSidenavModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    AngularFirestoreModule,MatRadioModule,
   ],
   providers: [
     {

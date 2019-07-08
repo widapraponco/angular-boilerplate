@@ -25,4 +25,7 @@ export class FormcdataService {
     this.image = images
     console.log(this.image)
   }
+  mintaImage(){
+    return this.image
+  }
 }

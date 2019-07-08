@@ -1,6 +1,6 @@
-
-   <mat-card class="example-card " *ngFor="let card of cards">
-      <mat-card-header>
+<div @openClose>
+   <mat-card class="example-card cards" *ngFor="let card of cards" >
+      <mat-card-header >
         <mat-card-title >{{card.title}}</mat-card-title>
         <mat-card-subtitle> {{card.detl}} </mat-card-subtitle>
         <div mat-card-avatar class="example-header-image">
@@ -10,5 +10,10 @@
         <!-- <div class="info">
             <span class="discount block">129930</span>
           </div> -->
+       
       </mat-card-header>
+      <!-- <button (click)="Toggle()">
+          Toggle Button
+        </button> -->
     </mat-card>
+</div>

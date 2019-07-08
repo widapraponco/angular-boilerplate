@@ -1,7 +1,8 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { FormcdataService } from '../../../../_services/formcdata.service';
 import { stringify } from '@angular/core/src/render3/util';
+
 
 // export interface DialogData {
 //   no: number;
@@ -23,7 +24,7 @@ export class FormcComponent implements OnInit {
   // address: string;
   // no_telp: number;
   image = []
-
+ 
   constructor(public dialog: MatDialog,public dialogRef: MatDialogRef<FormcDialogComponent>, public data: FormcdataService) { }
 
   ngOnInit() {
@@ -46,11 +47,10 @@ export class FormcComponent implements OnInit {
   templateUrl: './formc.dialog.component.html',
 })
 export class FormcDialogComponent {
-
   constructor( public dialog: MatDialog,
     public dialogRef: MatDialogRef<FormcDialogComponent>,
      public data: FormcdataService) {}
-
+    @Input() mage = this.data.mintaImage();
   // NoClick(): void {
   //   this.dialogRef.close();
   // }
